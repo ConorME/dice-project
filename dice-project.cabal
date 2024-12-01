@@ -25,6 +25,7 @@ source-repository head
 
 library
   exposed-modules:
+      Dice
       Lib
   other-modules:
       Paths_dice_project
@@ -35,6 +36,8 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , hspec
+    , random
   default-language: Haskell2010
 
 executable dice-project-exe
@@ -49,6 +52,8 @@ executable dice-project-exe
   build-depends:
       base >=4.7 && <5
     , dice-project
+    , hspec
+    , random
   default-language: Haskell2010
 
 test-suite dice-project-test
@@ -64,4 +69,6 @@ test-suite dice-project-test
   build-depends:
       base >=4.7 && <5
     , dice-project
+    , hspec
+    , random
   default-language: Haskell2010
